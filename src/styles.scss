@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+// p-fileupload{
+//     margin: 10px;
+//     display: flex;
+//     justify-content: center;
+//     width: 400px;
+//     height: 58px;
+//     align-items: flex-end;
+//     flex-shrink: 0;
+//     border-radius: 6px;
+//     border: 2px dashed var(--Gray-4, #BDBDBD);
+//     .p-button{
+//         padding-right: 100px;
+//         margin-bottom: 5px;
+//         width: 380px;
+//         height: 45px;
+//         color: var(--Gray-3, #828282);
+//         text-align: center;
+//         font-family: Poppins;
+//         font-size: 15px;
+//         font-style: normal;
+//         font-weight: 400;
+//         line-height: 20px;
+//         background: none;
+//         border: none;
+//         .p-button-icon{
+//             display: none;
+//           }
+//         .p-element::after {
+//             content: url('../src/assets/Icon.svg');
+//             display: inline-block;
+//             width: 14px; /* Set the width and height according to your SVG dimensions */
+//             height: 14px;
+//             margin-left: 100px;
+//           }
+//         // .p-button:focus{
+//         //     color: white;
+//         //     box-shadow: none;
+//         //     border: none;
+//         // }
+//     }
+// }
+// .last{
+//     display: flex;
+//     justify-content: center;
+//     p-fileupload{
+//         margin-left: 10px;
+//     }
+//     .p-button{
+//         padding-right: 330px;
+//         margin-bottom: 5px;
+//         width: 830px;
+//         height: 45px;
+//         color: var(--Gray-3, #828282);
+//         text-align: center;
+//         font-family: Poppins;
+//         font-size: 15px;
+//         font-style: normal;
+//         font-weight: 400;
+//         line-height: 20px;
+//         background: none;
+//         border: none;
+//         .p-button-icon{
+//             display: none;
+//           }
+//           .p-element::after {
+//             content: url('../src/assets/Icon.svg');
+//             display: inline-block;
+//             width: 14px; /* Set the width and height according to your SVG dimensions */
+//             height: 14px;
+//             margin-left: 320px;
+//           }
+// }
+// }
+.p-inputtext{
+  width: 450px;
+  margin: 8px auto;
+}

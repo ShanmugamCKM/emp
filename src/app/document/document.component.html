@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="heading">
+            <h4>Document Upload</h4>
+        </div>
+    </div> 
+    <div class="document">
+        <div class="row">
+            <div class="col-sm-6">
+                <p-toast></p-toast>
+                <p-fileUpload mode="basic" chooseLabel="Profile Upload" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" [maxFileSize]="1000000" (onUpload)="onUpload($event)"></p-fileUpload>
+            </div>
+            <div class="col-sm-6">
+                <p-toast></p-toast>
+                <p-fileUpload mode="basic" chooseLabel="Adhaar Card Upload" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" [maxFileSize]="1000000" (onUpload)="onUpload($event)"></p-fileUpload>
+            </div>
+        </div>
+    </div>
+    <div class="document">
+        <div class="row">
+            <div class="col-sm-6">
+                <p-toast></p-toast>
+                <p-fileUpload mode="basic" chooseLabel="Pancard Upload" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" [maxFileSize]="1000000" (onUpload)="onUpload($event)"></p-fileUpload>
+            </div>
+            <div class="col-sm-6">
+                <p-toast></p-toast>
+                <p-fileUpload mode="basic" chooseLabel="Certificate Upload" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" [maxFileSize]="1000000" (onUpload)="onUpload($event)"></p-fileUpload>
+            </div>
+        </div>
+    </div>
+    <div class="last">
+        <p-toast></p-toast>
+        <p-fileUpload mode="basic" chooseLabel="Resume Upload" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" [maxFileSize]="1000000" (onUpload)="onUpload($event)" [ngStyle]="{ 'width.px': 845}"></p-fileUpload>
+    </div>
+</div>
+<!-- <div class="row">
+    <div class="col-sm-12">
+        <div class="btn-group float-right">
+            <button type="button" class="btn btn-primary btn-lg">Back</button>
+            <button type="submit" class="btn btn-success btn-lg">Save Next</button>
+        </div>
+    </div>
+</div> -->
+
+  
+    
+
+  
+

@@ -1,0 +1,47 @@
+<!-- <form [formGroup]="userlist">
+    <div class="formgroup">
+        <label>Username</label>
+        <input type="text" pInputText formControlName="name"/>
+        <span *ngIf="form['name'].invalid && form['name'].touched">
+            <p *ngIf="form['name'].errors?.['required']"> name is required</p>
+            <p *ngIf="form['name'].errors?.['minlength']"> name has min 2 letters</p>
+        </span>
+    </div> 
+</form> -->
+<div class="container">
+    <div class="image">
+        <img src="../../assets/2976248.jpg" width="300">
+     </div>
+     <form [formGroup]="userlist">
+        <!-- <div class="formgroup ">
+            <label>Email</label>
+            <input type="text" pInputText formControlName="email">
+            <span *ngIf="form['email'].invalid && (form['email'].dirty || form['email'].touched)" class="error">
+                <p *ngIf="form['email'].errors?.['required']"> Email is required</p>
+                <p *ngIf="form['email'].errors?.['pattern']"> Email in-validformate</p>
+                <p *ngIf="form['email'].untouched && show" class="error">Password mukiyam</p>
+            </span>
+        </div> -->
+        <div class="formgroup">
+            <label>Username</label>
+            <input type="text" pInputText formControlName="name" required minlength="2"/>
+            <span *ngIf="form['name'].invalid && (form['name'].dirty || form['name'].touched)" class="error">
+                <p *ngIf="form['name'].errors?.['required']"> name is required</p>
+                <p *ngIf="form['name'].errors?.['minlength']"> name has min 2 letters</p>
+            </span>
+        </div> 
+        <div class="formgroup">
+            <label>Password</label>
+            <p-password  [toggleMask]="true" formControlName="password" required minlength="7"></p-password>
+            <span *ngIf="form['password'].invalid && (form['password'].dirty || form['password'].touched)" class="error">
+                <p *ngIf="form['password'].errors?.['required']"> password is required </p>
+                <p *ngIf="form['password'].errors?.['minlength']"> password has min 7 characters</p>
+                <!-- <span *ngIf="form['password'].untouched && show">Password mukiyam</span> -->
+            </span>
+        </div>
+        <div class="forgot">
+            <a href="">Forgot Password?</a>
+      </div>
+      <p-button  class="submitButton"  label="Sign in" (click)="signin()"></p-button>
+    </form>
+</div>

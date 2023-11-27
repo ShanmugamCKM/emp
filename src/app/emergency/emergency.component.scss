@@ -1,0 +1,43 @@
+.formgroup{
+    position: relative;
+    margin-bottom: 2em;
+}
+p{
+    position: absolute;
+}
+.container {
+    max-width: 512px;
+    min-width: 400px;
+    width: 100%;
+    height: 434px;
+    margin: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 36px 24px;
+    .image{
+        position: absolute;
+        top: -320px;
+        left: 100px;
+    }
+    input{
+        width: 450px;
+        margin: 8px auto;   
+    }
+    .forgot{
+        text-align: right;
+        padding: 10px 0;
+        margin-right: 4%;
+        a{
+            text-decoration: none;
+            color: #0085CB;
+        }
+    }    
+    .error{
+        color: red;
+        font-size: 12px;
+    }
+}

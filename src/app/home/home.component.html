@@ -1,0 +1,83 @@
+<!-- <table>
+<tr>
+    <th>
+        name
+    </th>
+</tr>
+<tr *ngFor="let item of get">
+    <td>
+        {{item.username}}
+    </td>
+</tr>
+</table> -->
+<div class="button">
+    <p-button label="Addexpense" (onClick)="add()"></p-button>
+</div><br>
+<div class="card">
+    <!-- <p-table [value]="get" [tableStyle]="{ 'min-width': '50rem' }"> -->
+    <p-table [value]="get" [scrollable]="true" [scrollHeight]="'500px'" [paginator]="true" [rows]="5" [tableStyle]="{'min-width': '60rem'}">
+
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="username">Username <p-sortIcon field="username"></p-sortIcon></th>
+                <th pSortableColumn="password">Password <p-sortIcon field="password"></p-sortIcon></th>
+                <th>Update</th>
+                <th>Deldete</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-get>
+            <tr>
+                <td>{{ get.username }}</td>
+                <td>{{ get.password }}</td>
+                <td><p-button label="Update" [outlined]="true"(onClick)="edit(get.id)" severity="danger"></p-button></td>
+                <p-button label="delete" [text]="true" (click)="deleteUser(get.id)" severity="help"></p-button>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<div class="card flex justify-content-center">
+    <p-sidebar [(visible)]="sidebarVisible" position="right" [style]="{width:'500px'}">
+        <ng-template pTemplate="header">Header Content</ng-template>
+        <ng-template pTemplate="content">
+            <div class="container">
+                 <form [formGroup]="userlist">
+                    <!-- <div class="formgroup ">
+                        <label>Email</label>
+                        <input type="text" pInputText formControlName="email">
+                        <span *ngIf="form['email'].invalid && (form['email'].dirty || form['email'].touched)" class="error">
+                            <p *ngIf="form['email'].errors?.['required']"> Email is required</p>
+                            <p *ngIf="form['email'].errors?.['pattern']"> Email in-validformate</p>
+                            <p *ngIf="form['email'].untouched && show" class="error">Password mukiyam</p>
+                        </span>
+                    </div> -->
+                    <div class="formgroup">
+                        <label>Username</label>
+                        <input type="text" pInputText formControlName="username" required minlength="2"/>
+                        <span *ngIf="form['username'].invalid && (form['username'].dirty || form['username'].touched)" class="error">
+                            <p *ngIf="form['username'].errors?.['required']"> name is required</p>
+                            <p *ngIf="form['username'].errors?.['minlength']"> name has min 2 letters</p>
+                        </span>
+                    </div> 
+                    <div class="formgroup">
+                        <label>Password</label>
+                        <p-password  [toggleMask]="true" formControlName="password" required minlength="7"></p-password>
+                        <span *ngIf="form['password'].invalid && (form['password'].dirty || form['password'].touched)" class="error">
+                            <p *ngIf="form['password'].errors?.['required']"> password is required </p>
+                            <p *ngIf="form['password'].errors?.['minlength']"> password has min 7 characters</p>
+                        </span>
+                    </div>
+                  
+
+                </form>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p-toast position="top-center"></p-toast>
+            <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+            <p-button  class="submitButton"  *ngIf="!update" label="Submit" (click)="submit1()"></p-button>
+            <p-button  class="submitButton" *ngIf="update" label="Update" (click)="updateUser(userlist.value)"></p-button>
+        </ng-template>
+    </p-sidebar>
+</div>
